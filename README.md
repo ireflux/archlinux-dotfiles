@@ -1,3 +1,3 @@
 # ireflux's dotfiles
 
-my dotfiles.
+My Arch Linux dotfiles.
