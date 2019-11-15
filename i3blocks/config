@@ -86,15 +86,10 @@ color=#00FF00
 interval=10
 separator=false
 
-[wifi]
-#INTERFACE=wlp3s0
-#label=wifi:
-interval=10
-separator=false
-
 [bandwidth]
+command=~/.config/i3blocks/script/bandwidth wlp3s0
 #INTERFACE=eth0
-interval=5
+interval=1
 
 # CPU usage
 #

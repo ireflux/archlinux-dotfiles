@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+        echo
+        echo usage: $0 network-interface
+        echo
+        echo e.g. $0 eth0
+        echo
+        exit
+fi
+
+
+r1=`cat /sys/class/net/$1/statistics/rx_bytes`
+t1=`cat /sys/class/net/$1/statistics/tx_bytes`
+sleep 1
+r2=`cat /sys/class/net/$1/statistics/rx_bytes`
+t2=`cat /sys/class/net/$1/statistics/tx_bytes`
+TBPS=`expr $t2 - $t1`
+RBPS=`expr $r2 - $r1`
+transmitting=`expr $TBPS / 1024`
+receiving=`expr $RBPS / 1024`
+echo ": $receiving KB/s $transmitting KB/s"
+echo ": $receiving KB/s $transmitting KB/s"
