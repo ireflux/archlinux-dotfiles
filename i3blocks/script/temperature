@@ -1,0 +1,6 @@
+#!/bin/bash
+
+core0=$(sensors | grep "Core 0" | awk '{print $3}')
+core1=$(sensors | grep "Core 1" | awk '{print $3}')
+echo "$core0"
+echo "$core0"

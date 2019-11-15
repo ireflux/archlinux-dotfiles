@@ -1,0 +1,12 @@
+#!/bin/bash
+INTERFACE="${BLOCK_INSTANCE:-wlp3s0}"
+
+[[ ! -d /sys/class/net/${INTERFACE}/wireless ]] ||
+    [[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]] && exit
+
+QUALITY=$(grep $INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
+
+# full text and short text
+echo "Wi-Fi:$QUALITY%"
+echo "wifi:$QUALITY%"
+
