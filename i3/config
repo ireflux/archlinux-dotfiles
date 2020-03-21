@@ -14,7 +14,6 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -221,7 +220,5 @@ gaps outer 2
 
 # startup applications
 exec --no-startup-id pulseaudio --start
-#exec --no-startup-id nm-applet
-#exec --no-startup-id fcitx --start
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-fill /home/sherry/Images/.background-images/498.jpg
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --randomize --bg-scale /home/sherry/Images/.background-images/*
