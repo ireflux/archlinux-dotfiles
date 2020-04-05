@@ -26,8 +26,16 @@
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
 command=~/.config/i3blocks/script/$BLOCK_NAME
-separator_block_width=15
-markup=none
+separator_block_width=20
+color=#ffffff
+markup=pango
+
+
+[simple]
+#align=center
+#full_text=Click me!
+#min_width=Button=? x=? y=?
+#command=echo "Button=$button x=$x y=$y"
 
 # Volume indicator
 #
@@ -42,12 +50,11 @@ markup=none
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [temperature]
-#label=TEMP
-interval=10
+label=<span color="#8be9fd"> </span>
+interval=120
 
 [volume]
-#label=♪
-#label=VOL
+label=<span color="#ff79c6"> </span>
 interval=once
 signal=10
 #STEP=5%
@@ -56,7 +63,7 @@ signal=10
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-#label=MEM
+label=<span color="#a9e185"> </span>
 separator=false
 interval=30
 
@@ -74,7 +81,12 @@ interval=30
 [disk]
 #label=HOME
 #DIR=/mnt/data
-interval=30
+#interval=30
+
+[home]
+command=df -h /home | awk 'FNR==2{print $4}'
+label=<span color="#a9e185"> </span>
+interval=once
 
 # Network interface monitoring
 #
@@ -82,49 +94,54 @@ interval=30
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
 #IFACE=wlan0
-color=#00FF00
-interval=10
-separator=false
+#color=#00FF00
+#interval=10
+#separator=false
 
 [bandwidth]
+label=<span color="#ffb86c"> </span>
 command=~/.config/i3blocks/script/bandwidth wlp3s0
 #INTERFACE=eth0
-interval=1
+interval=2
 
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-#label=CPU
+label=<span color="#8be9fd"> </span>
 interval=10
-min_width=CPU 100.00%
 #separator=false
 
 [load_average]
 #label=LOAD
-interval=10
+#interval=10
 
 # Battery indicator
 #
 # The battery instance defaults to 0.
 [battery]
-#label=battery
-#label=⚡
+label=<span color="#8be9fd"> </span>
 interval=30
 
 # Date Time
 #
-[datetime]
-#lable=time
-interval=5
+[time]
+label=<span color="#ffb86c"> </span>
+command= date "+%R"
+interval=60
+
+[date]
+label=<span color="#8be9fd"> </span>
+command= date "+%A %D"
+interval=once
 
 # Generic media player support
 #
 # This displays "ARTIST - SONG" if a music is playing.
 # Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
 #[mediaplayer]
-#instance=spotify
+#instanceinterval=10=spotify
 #interval=5
 #signal=10
 

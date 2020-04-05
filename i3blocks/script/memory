@@ -3,5 +3,4 @@
 mem_usage=$(free -h | grep Mem | awk '{print $3}')
 #swap_free=$(free -h | grep Swap | awk '{print $4}')
 
-echo "Memory Usage:${mem_usage}"
-echo "Mem:${mem_usage}"
+echo "${mem_usage}"

@@ -19,5 +19,6 @@ TBPS=`expr $t2 - $t1`
 RBPS=`expr $r2 - $r1`
 transmitting=`expr $TBPS / 1024`
 receiving=`expr $RBPS / 1024`
-echo ": $receiving KB/s $transmitting KB/s"
-echo ": $receiving KB/s $transmitting KB/s"
+echo "$receiving KB/s $transmitting KB/s"
+echo "$receiving KB/s $transmitting KB/s"
+

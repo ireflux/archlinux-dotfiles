@@ -31,7 +31,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite -e fish
 
-# ----------by user------------
+# ----------by user------------{{{
 # control focused window when follows the mouse movements
 focus_follows_mouse no
 
@@ -46,9 +46,14 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth
 
 # Screenshot
-bindsym Print exec scrot ~/Downloads/%Y-%m-%d-%T-screenshot.png
-bindsym Ctrl+Print exec scrot -s ~/Downloads/%Y-%m-%d-%T-screenshot.png
-# ----------by user------------
+bindsym Print exec xfce4-screenshooter -f -s ~/Downloads/%Y-%m-%d-%T-screenshot.png
+bindsym Alt+Print exec xfce4-screenshooter -r -c --display=DISPLAY
+
+# change volume
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+# ----------by user------------}}}
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -219,6 +224,8 @@ gaps inner 8
 gaps outer 2
 
 # startup applications
-exec --no-startup-id pulseaudio --start
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh --randomize --bg-scale /home/sherry/Images/.background-images/*
+# exec --no-startup-id pulseaudio --start
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --randomize --bg-scale /home/sherry/Images/wallhaven/*
+exec        --no-startup-id nm-applet
+# exec        --no-startup-id fcitx
