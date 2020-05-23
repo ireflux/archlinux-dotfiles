@@ -6,8 +6,8 @@
 
 # Interface Preview
 
-![i3gaps](http://github.com/ireflux/archlinux-dotfiles/raw/master/Preview/i3gaps.png)
-![terminal](http://github.com/ireflux/archlinux-dotfiles/raw/master/Preview/terminal.png)
+![i3gaps](https://github.com/ireflux/archlinux-dotfiles/raw/master/Preview/i3gaps.png)
+![terminal](https://github.com/ireflux/archlinux-dotfiles/raw/master/Preview/terminal.png)
 
 # References
 
