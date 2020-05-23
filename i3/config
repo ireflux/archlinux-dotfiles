@@ -46,8 +46,8 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth
 
 # Screenshot
-bindsym Print exec xfce4-screenshooter -f -s ~/Downloads/%Y-%m-%d-%T-screenshot.png
-bindsym Alt+Print exec xfce4-screenshooter -r -c --display=DISPLAY
+bindsym Print exec xfce4-screenshooter -f -s ~/Downloads/screenshot.png
+bindsym Alt+Print exec xfce4-screenshooter -w -c
 
 # change volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
