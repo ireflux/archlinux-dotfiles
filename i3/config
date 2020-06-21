@@ -225,7 +225,7 @@ gaps outer 2
 
 # startup applications
 # exec --no-startup-id pulseaudio --start
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --randomize --bg-scale /home/sherry/Images/wallhaven/*
 exec        --no-startup-id nm-applet
 # exec        --no-startup-id fcitx
