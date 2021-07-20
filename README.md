@@ -11,5 +11,4 @@
 
 # References
 
-vimrc 来源： [amix/vimrc](https://github.com/amix/vimrc)  
-fcitx/skin/material 来源： [hrko99/fcitx-skin-material](https://github.com/hrko99/fcitx-skin-material)
+vimrc 来源： [amix/vimrc](https://github.com/amix/vimrc)
