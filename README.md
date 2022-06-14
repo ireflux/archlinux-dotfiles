@@ -11,5 +11,5 @@
 
 # References
 
-vimrc： [amix/vimrc](https://github.com/amix/vimrc)
+vimrc： [amix/vimrc](https://github.com/amix/vimrc)  
 aria2.conf: [P3TERX/aria2.conf](https://github.com/P3TERX/aria2.conf)
